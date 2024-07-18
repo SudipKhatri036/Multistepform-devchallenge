@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Multi Step Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <img src="./blur-radial.svg" alt="svg" class="top-svg" />
+    <img src="./blur-radial.svg" alt="svg" class="bottom-svg" />
+    <main>
+      <div class="container">
+        <div class="first-content content-active">
+          <h2>Register</h2>
+          <form>
+            <label for="user-name">Name</label>
+            <input
+              type="text"
+              placeholder="enter your name"
+              id="user-name"
+              name="user-name"
+              required
+            />
+            <p class="error-msg name-err">The name must be valid</p>
+            <label for="user-email">Email</label>
+            <input
+              type="text"
+              placeholder="example@gmail.com"
+              id="user-email"
+              name="user-email"
+              required
+            />
+            <p class="error-msg email-err">The email must be valid</p>
+          </form>
+        </div>
+        <div class="second-content">
+          <h2>Which topics you are interested in?</h2>
+          <form>
+            <label class="topics"
+              >Software Development
+              <input
+                type="checkbox"
+                name="check-box"
+                value="Software Development"
+              />
+            </label>
+            <label class="topics"
+              >User Experience
+              <input type="checkbox" name="check-box" value="User Experience" />
+            </label>
+            <label class="topics"
+              >Graphic Desgin
+              <input type="checkbox" name="check-box" value="Graphic Desgin" />
+            </label>
+          </form>
+        </div>
+        <div class="third-content">
+          <h2>Summary</h2>
+          <p>Name: <span class="highlight name-span">Emily Johnson</span></p>
+          <p>
+            Email:
+            <span class="highlight email-span">emily@emilyjohnsonstl.com</span>
+          </p>
+          <div class="topic-list">
+            <p>Topics:</p>
+            <ul></ul>
+          </div>
+        </div>
+        <div class="success-msg">
+          <h2>Success</h2>
+          <i class="fa-regular fa-face-smile"></i>
+          <p>Please Wait 2 second Until You Go Back To Page</p>
+        </div>
+        <button class="btn-cont">Continue</button>
+      </div>
+      <div class="bottom-content">
+        <p>Step <span class="step-count">1</span> of 3</p>
+        <div class="roundstep-container">
+          <div class="roundlight active"></div>
+          <div class="roundlight"></div>
+          <div class="roundlight"></div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/0ba6a4d109.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
